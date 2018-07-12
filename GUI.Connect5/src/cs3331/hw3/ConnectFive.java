@@ -15,6 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.JOptionPane;
 
 
+
 /**
  * Frame class for the graphical user interface of connect five.
  * Controller for handling events that affect the model and the view.
@@ -149,6 +150,7 @@ public class ConnectFive extends JFrame
 		}
 	
 	}
+	
 	public static void main(String[] args) 
 	{
 		ConnectFive cf = new ConnectFive();

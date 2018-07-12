@@ -107,21 +107,40 @@ public class BoardPanel extends JPanel
 		}
 
 		int [][]b = board.getBoard();
+		/*int o=625/board.getSize();
+		for(int r=0;r<board.getSize();r++)
+		{
+			for(int c=0;c<board.getSize();c++) 
+			{
+				b[r][c]=1;
+				if(b[r][c]==1) {
+					g.setColor(Color.RED);
+					g.fillOval(((r+1)*(o)-(o/2)),((c+1)*(o)-(o/2)),o-10,o-10);}
+				if(b[r][c]==2) {
+					g.setColor(Color.BLUE);
+					g.fillOval(((r+1)*(o)-(o/2)),((c+1)*(o)-(o/2)),o-10,o-10);}
+				if(b[r][c]==0) {
+					g.setColor(grey);
+					g.fillOval(((r+1)*(o)-(o/2)),((c+1)*(o)-(o/2)),o-10,o-10);}
+			}
+		}
+	}*/
 		if(board.getSize() == 15) {
 			int o = 600 / board.getSize();
 			for(int r=0;r<board.getSize();r++)
 			{
 				for(int c=0;c<board.getSize();c++) 
 				{
+					//b[r][c]=1;
 					if(b[r][c]==1) {
 						g.setColor(Color.RED);
-						g.fillOval(((r+1)*(o)-(o/3)-37),((c+1)*(o)-(o/3)-37),o-10,o-10);}
+						g.fillOval(((r+1)*(o)-(o/2)+7),((c+1)*(o)-(o/2)+7),o-10,o-10);}
 					if(b[r][c]==2) {
 						g.setColor(Color.BLUE);
-						g.fillOval(((r+1)*(o)-(o/3)-37),((c+1)*(o)-(o/3)-37),o-10,o-10);}
+						g.fillOval(((r+1)*(o)-(o/2)+7),((c+1)*(o)-(o/2)+7),o-10,o-10);}
 					if(b[r][c]==0) {
 						g.setColor(grey);
-						g.fillOval(((r+2)*(o)-(o/3)-37),((c+2)*(o)-(o/3)-37),o-10,o-10);}
+						g.fillOval(((r+1)*(o)-(o/2)+7),((c+1)*(o)-(o/2)+7),o-10,o-10);}
 				}
 			}
 		}

@@ -64,7 +64,7 @@ public class Board
 
 		{
 
-			board[x/(600/size)][y/(600/size)]=p;
+			board[x/(625/size)][y/(625/size)]=p;
 			return true;
 
 		}
@@ -93,11 +93,11 @@ public class Board
 
 	{
 
-		if(x<600 || x>25 ||y<600 ||y>25) {
+		if(x<625 || x>25 ||y<625 ||y>25) {
 
-			x=x/(600/size);
+			x=x/(625/size);
 
-			y=y/(600/size);
+			y=y/(625/size);
 
 			if(board[x][y]==0)
 
