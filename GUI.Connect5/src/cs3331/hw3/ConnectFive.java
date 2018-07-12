@@ -67,6 +67,7 @@ public class ConnectFive extends JFrame
 			button.addActionListener(e -> {
 				if(e.getSource() == largeBoard) {
 					board.setSize(15);
+					//pop up message to start a new game
 					answer = JOptionPane.showConfirmDialog(this,"Leave this game and start a new 15x15 game?");
 					if(answer == 0) {
 						message.setText("Welcome to Connect Five");
@@ -112,7 +113,7 @@ public class ConnectFive extends JFrame
 		boardPanel.addMouseListener(new MouseAdapter()
 		{
 			public void mousePressed(MouseEvent e) 
-			{
+			{//when player clicks on board to place a disc
 				message.setText("X: " + e.getX() + " Y: " + e.getY());
 				action(e);
 				if (boardPanel.check() == 1) {
@@ -120,7 +121,7 @@ public class ConnectFive extends JFrame
 				}
 				if (boardPanel.check() == 2) {
 					message.setText("Player 2 Wins!");
-				
+
 				}
 				repaint();
 
@@ -129,6 +130,7 @@ public class ConnectFive extends JFrame
 	}//end constructor
 	/**
 	 * Initializes the frame for the GUI and starts the application.
+	 * @param e e is the mouse clicked event
 	 */
 	public void action(MouseEvent e) {
 		if(boardPanel.check() == 0) {
@@ -146,11 +148,11 @@ public class ConnectFive extends JFrame
 			else {
 				message.setText("Invalid Move. Try Again.");
 			}
-			
+
 		}
-	
+
 	}
-	
+
 	public static void main(String[] args) 
 	{
 		ConnectFive cf = new ConnectFive();

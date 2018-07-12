@@ -93,57 +93,40 @@ public class BoardPanel extends JPanel
 		for(int i = 0; i <= board.getSize(); i++)//to change the grid into a 9x9 change the for loop to nine 
 		{   
 			if(board.getSize() == 9) {
-				//vertical
+				//draws vertical lines of the grid
 				g.drawLine(25 + i * 66, 25, 25 + i * 66, 625);
-				//horizontal
+				//draws horizontal lines of the grid
 				g.drawLine(25,25 + i * 66 , 625, 25 + i * 66);
 			}
 			if(board.getSize() == 15) {
-				//vertical lines
+				//draws vertical lines of the grid
 				g.drawLine(25 + i * 40, 25, 25 + i * 40, 625);
-				//horizontal
+				//draws horizontal lines of the grid
 				g.drawLine(25,25 + i * 40 , 625, 25 + i * 40);
 			} 
 		}
 
 		int [][]b = board.getBoard();
-		/*int o=625/board.getSize();
-		for(int r=0;r<board.getSize();r++)
-		{
-			for(int c=0;c<board.getSize();c++) 
-			{
-				b[r][c]=1;
-				if(b[r][c]==1) {
-					g.setColor(Color.RED);
-					g.fillOval(((r+1)*(o)-(o/2)),((c+1)*(o)-(o/2)),o-10,o-10);}
-				if(b[r][c]==2) {
-					g.setColor(Color.BLUE);
-					g.fillOval(((r+1)*(o)-(o/2)),((c+1)*(o)-(o/2)),o-10,o-10);}
-				if(b[r][c]==0) {
-					g.setColor(grey);
-					g.fillOval(((r+1)*(o)-(o/2)),((c+1)*(o)-(o/2)),o-10,o-10);}
-			}
-		}
-	}*/
+		//code to fill 15x15
 		if(board.getSize() == 15) {
 			int o = 600 / board.getSize();
 			for(int r=0;r<board.getSize();r++)
 			{
 				for(int c=0;c<board.getSize();c++) 
 				{
-					//b[r][c]=1;
 					if(b[r][c]==1) {
 						g.setColor(Color.RED);
-						g.fillOval(((r+1)*(o)-(o/2)+7),((c+1)*(o)-(o/2)+7),o-10,o-10);}
+						g.fillOval(((r+1)*(o)-(o/2)+7),((c+1)*(o)-(o/2)+7),o-10,o-10);}//fill the oval in correct coordinates
 					if(b[r][c]==2) {
 						g.setColor(Color.BLUE);
-						g.fillOval(((r+1)*(o)-(o/2)+7),((c+1)*(o)-(o/2)+7),o-10,o-10);}
+						g.fillOval(((r+1)*(o)-(o/2)+7),((c+1)*(o)-(o/2)+7),o-10,o-10);}//fill the oval in correct coordinates
 					if(b[r][c]==0) {
 						g.setColor(grey);
-						g.fillOval(((r+1)*(o)-(o/2)+7),((c+1)*(o)-(o/2)+7),o-10,o-10);}
+						g.fillOval(((r+1)*(o)-(o/2)+7),((c+1)*(o)-(o/2)+7),o-10,o-10);}//fill the oval in correct coordinates
 				}
 			}
 		}
+		//code to fill 9x9
 		if(board.getSize() == 9) {
 			int o = 600 / board.getSize();
 			for(int r=0;r<board.getSize();r++)
@@ -152,13 +135,13 @@ public class BoardPanel extends JPanel
 				{
 					if(b[r][c]==1) {
 						g.setColor(Color.RED);
-						g.fillOval(((r)*(o)-(o/10)+37),((c)*(o)-(o/10)+37),o-10,o-10);}
+						g.fillOval(((r)*(o)-(o/10)+37),((c)*(o)-(o/10)+37),o-10,o-10);}//fill the oval in correct coordinates
 					if(b[r][c]==2) {
 						g.setColor(Color.BLUE);
-						g.fillOval(((r)*(o)-(o/10)+37),((c)*(o)-(o/10)+37),o-10,o-10);}
+						g.fillOval(((r)*(o)-(o/10)+37),((c)*(o)-(o/10)+37),o-10,o-10);}//fill the oval in correct coordinates
 					if(b[r][c]==0) {
 						g.setColor(grey);
-						g.fillOval(((r+1)*(o)-(o/10)-30),((c+1)*(o)-(o/10)-30),o-10,o-10);}
+						g.fillOval(((r+1)*(o)-(o/10)-30),((c+1)*(o)-(o/10)-30),o-10,o-10);}//fill the oval in correct coordinates
 				}
 			}
 		}
